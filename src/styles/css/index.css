@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: "Montserrat Alternates",sans-serif; }
+
+.title {
+  font-size: 2rem;
+  margin: 0; }
+
+.center-title {
+  text-align: center; }
+
+.input-field {
+  width: 20%; }
+
+.main-section {
+  margin: 1rem; }
+  .main-section .weather-results-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 4fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px; }
+    .main-section .weather-results-section .section {
+      padding: 1.5rem;
+      border: #1ac6ff 10px solid;
+      border-radius: 25px;
+      box-shadow: #0086b3 0.5rem 0.5rem 0px; }
+    .main-section .weather-results-section .current-weather-section > * {
+      margin: 0; }
+    .main-section .weather-results-section .current-weather-section {
+      grid-area: 1 / 1 / 2 / 2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .main-section .weather-results-section .current-weather-section .title {
+        margin-bottom: 2rem; }
+      .main-section .weather-results-section .current-weather-section .location-name, .main-section .weather-results-section .current-weather-section .location-localtime {
+        margin-bottom: 1rem; }
+      .main-section .weather-results-section .current-weather-section .weather-icon {
+        margin: 1rem; }
+    .main-section .weather-results-section .forecast-section {
+      grid-area: 1 / 2 / 3 / 3; }
+      .main-section .weather-results-section .forecast-section .forecast-list .forecast-slot .forecast-schedule-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center; }
+        .main-section .weather-results-section .forecast-section .forecast-list .forecast-slot .forecast-schedule-list .forecast-details {
+          transition: 0.5s;
+          margin: 0rem 0.5rem;
+          text-align: center; }
+        .main-section .weather-results-section .forecast-section .forecast-list .forecast-slot .forecast-schedule-list .forecast-details:hover {
+          transform: scale(1.3); }
+    .main-section .weather-results-section .app-details-section {
+      grid-area: 2 / 1 / 3 / 2;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      .main-section .weather-results-section .app-details-section a {
+        color: #0086b3; }
+  .main-section .loading-message {
+    color: #0086b3;
+    text-align: center; }
+    .main-section .loading-message .message {
+      margin: 1rem;
+      font-size: 1.5rem; }
+    .main-section .loading-message #loading-icon {
+      animation: spinSunAnimation 2s linear infinite;
+      transform-origin: center;
+      transform-box: fill-box; }
+
+@keyframes spinSunAnimation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .main-section .error-message {
+    text-align: center; }
+    .main-section .error-message .message {
+      margin: 1rem;
+      font-size: 1.5rem; }
+    .main-section .error-message #loading-icon {
+      animation: spinSunAnimation 2s linear infinite;
+      transform-origin: center;
+      transform-box: fill-box; }
+
+@keyframes spinSunAnimation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@media screen and (max-width: 600px) {
+  .main-section .weather-results-section {
+    display: flex;
+    flex-direction: column; }
+  .input-field {
+    width: 50%; } }
