@@ -20,12 +20,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 h2{
     padding: 0.3em 0.6em 0.3em 0.6em;
     color: grey;
     font-size: 1.3em;
+    height: 50%;
 }
 
 .extended-cards {
@@ -87,7 +89,7 @@ h2{
 
 #left{
     padding: 1em;
-    flex: 1 2 50%
+    flex: 1 2 0%
 }
 
 #right{
@@ -262,12 +264,9 @@ h2{
 
 
 #myimg{
-    max-width:100%;
-    max-height:100%;
-        /* width: 375px;
-            height: 200px;
-            object-fit: cover;
-        } */
+    width: 225px;
+    height: 100%;
+    object-fit: cover;
 }
 
 #news{
@@ -277,10 +276,14 @@ h2{
 }
 
 .news-card{
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
     border: 3px solid grey;
+    margin: 10px; 
     padding: 10px;
     width: 250px;
-    height: 400px;
+    height: 450px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

@@ -7,12 +7,6 @@ import getDay from "../scripts/getDay";
 function DisplayMainInfo() {
 
     const data = useContext(MainData);
-    const [weatherState, setWeatherState] = useState(""); 
-
-    function handleClick() {
-        console.log(data)
-        console.log(parse(data[0].daily.weathercode[1])[1])
-    }
 
     return (
         <>

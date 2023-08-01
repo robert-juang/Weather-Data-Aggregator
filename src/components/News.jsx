@@ -25,8 +25,6 @@ function News({payload}) {
                             <div class="news-card">
                                 <h2 id="subtitle" onClick={() => { () => window.open(data.url,"_blank", "nonreferrer"); }}>{data.title}</h2>
                                 <img id='myimg' src={data.urlToImage} alt="picture" onClick={() => window.open(data.url, "_blank", "nonreferrer")} />
-                                <p id="subtitle">By: {data.author}</p>
-                                {/* <div id="subtitle">Description: {data.description}</div> */}
                             </div>
                         )))
                     }

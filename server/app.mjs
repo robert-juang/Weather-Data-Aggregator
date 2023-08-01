@@ -38,7 +38,11 @@ app.post('/location', async (req,res) => {
     var location = ""; 
     var weather = ""; 
     var air = ""; 
-    var newsData = ""; 
+    var newsData = [];
+
+    const date = new Date();
+    date.setDate(date.getDate() - 1);
+    const currentDate = date.toISOString().split('T')[0]
 
     await fetch(`${api.geo_base}direct?q=${data.weatherEntry}&limit=1&appid=${api.key}`)
         .then((res) => res.json())
@@ -73,11 +77,12 @@ app.post('/location', async (req,res) => {
         .catch((error) => {
             console.log(error);
         });
-
+    
     await fetch(`https://newsapi.org/v2/everything?q=${weather[0].name}&language=en&apiKey=${api.newsapi}`)
         .then((res) => res.json())
         .then((response) => {
-            newsData = response.articles.splice(0, 3);
+            newsData = response.articles.filter((news) => news.urlToImage !== null); 
+            newsData = newsData.splice(0, 6);
         })
         .catch((error) => {
             console.log(error);
@@ -91,7 +96,7 @@ app.post('/location', async (req,res) => {
                                         Here's the city name: ${location[0].name}. Make sure to add <br> everytime a line break happens.
                                         Be concise and don't include words like "Sure!" in the beginning. Start the prompt with "Current, in city ${location[0].name}..."`}
         ],
-        temperature: 0.3,
+        temperature: 0.1,
     });
 
     res.send({ "location": location, "air": air, "weather": weather, "newsdata": newsData, "gptmessage":chat_completion.data.choices }); 

@@ -30,7 +30,8 @@ function Weather() {
     setSearch(weatherEntry);
 
     //fetch longitude and latitude 
-    const response1 = await fetch ("http://localhost:8080/location", {
+
+    await fetch ("http://localhost:8080/location", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -51,12 +52,13 @@ function Weather() {
   };
 
   function changeTemperature() {
-    if (temperature === "") {
-      setTemperature("&temperature_unit=fahrenheit");
+    if (temperature === "&temperature_unit=fahrenheit") {
+      setTemperature("&temperature_unit=celsius");
     }
     else {
-      setTemperature("");
+      setTemperature("&temperature_unit=fahrenheit");
     }
+    console.log(temperature)
   }
   return (
     <div className='search'>

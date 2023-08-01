@@ -3,12 +3,6 @@ import TypeIt from "typeit-react";
 
 export default function GPTSummary({payload}) {
 
-    const [text, setText] = useState('');
-
-    useEffect(() => {
-        setText(payload); // Update the local state when payload changes
-    }, [payload])
-
     return (
         <>
             <div class="main-info">
