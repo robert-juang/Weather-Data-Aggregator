@@ -6,9 +6,10 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const app = express()
+const port = process.env.PORT || 8080;
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://weather-data-aggregator-n1uz1d2vw-robert-juang.vercel.app/',
     credentials: true
 }));
 
@@ -102,6 +103,5 @@ app.post('/location', async (req,res) => {
     res.send({ "location": location, "air": air, "weather": weather, "newsdata": newsData, "gptmessage":chat_completion.data.choices }); 
 })
 
-const port = 8080;
 app.listen(port, () => console.log("server started"))
 
