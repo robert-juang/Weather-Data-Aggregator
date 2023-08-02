@@ -6,6 +6,10 @@ The application is hosted on Vercel for the frontend and Render for the backend.
 
 The frontend can be viewed [here](https://weather-data-aggregator.vercel.app/)
 
+![Alt text](/assets/img1.jpg?raw=true "Search")
+![Alt text](/assets/img2.jpg?raw=true "Body1")
+![Alt text](/assets/img3.jpg?raw=true "Body2")
+
 ### Technologies 
 
 * React
