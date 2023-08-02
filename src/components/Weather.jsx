@@ -31,7 +31,7 @@ function Weather() {
 
     //fetch longitude and latitude 
 
-    await fetch ("http://localhost:8080/location", {
+    await fetch("https://weather-aggregator.onrender.com/location", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
