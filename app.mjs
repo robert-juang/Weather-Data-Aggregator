@@ -9,7 +9,7 @@ const app = express()
 const port = process.env.PORT || 8080;
 
 app.use(cors({
-    origin: 'https://weather-data-aggregator-n1uz1d2vw-robert-juang.vercel.app/',
+    origin: 'https://weather-data-aggregator-n1uz1d2vw-robert-juang.vercel.app',
     credentials: true
 }));
 
