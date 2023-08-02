@@ -13,7 +13,7 @@ function News({payload}) {
         setNewsData(payload)
         setLoaded(true) 
     },[payload])
-
+    //change
     return (
         <>
             <div class="main-info" id="news">
