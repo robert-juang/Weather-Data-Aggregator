@@ -8,10 +8,7 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT || 8080;
 
-app.use(cors({
-    origin: 'https://weather-data-aggregator-n1uz1d2vw-robert-juang.vercel.app',
-    credentials: true
-}));
+app.use(cors());
 
 const api = {
     key: process.env.API_OPENWEATHER_KEY,
