@@ -1,4 +1,4 @@
-### Forecast-News Aggregator
+# Forecast-News Aggregator
 
 A full-stack application utilizing React, NodeJS, Express, and various APIs to provide the user with an interface to view weather, air quality, and news data of the given input of city / state that the user input. Additionally, the OpenAI API is used to provide a short summary of the data as well as some suggestions for activities around the area. 
 
