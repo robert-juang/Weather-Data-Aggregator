@@ -16,6 +16,8 @@ The frontend can be viewed [here](https://weather-data-aggregator.vercel.app/)
 * NodeJS
 * ExpressJS
 * APIs (Weather, Air Quality, News, OpenAI)
+* ChartJS
+* Material UI
 * Vercel
 * Render
 
@@ -25,16 +27,8 @@ The frontend can be viewed [here](https://weather-data-aggregator.vercel.app/)
 * Git / Github
 * Postman
 * Axios
-* AWS SDK
 * Geocode
 * CRON
-
-## Additional libraries used 
-
-* Material UI
-* Chart.js
-* React-animation
-* Typeit from typeit-react
 
 ## Functionality 
 
