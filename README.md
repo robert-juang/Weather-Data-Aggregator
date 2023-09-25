@@ -49,5 +49,7 @@ The frontend can be viewed [here](https://weather-data-aggregator.vercel.app/)
 
 ## Version History
 
+* 0.1.2
+    * Fixed bug in search not working properly. 
 * 0.1
     * Initial Release
