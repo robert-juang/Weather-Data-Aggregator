@@ -3,6 +3,7 @@ import express from "express"
 import cors from "cors"; 
 import { Configuration, OpenAIApi } from "openai"
 import dotenv from "dotenv"
+
 dotenv.config()
 
 const app = express()
@@ -27,20 +28,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Server Root')
 })
 
+//
 app.post('/location', async (req,res) => {
     //fetch longitude and latitude 
     let data = req.body; 
-    var location = ""; 
-    var weather = ""; 
-    var air = ""; 
-    var newsData = [];
+    let location = ""; 
+    let weather = ""; 
+    let air = ""; 
+    let newsData = [];
 
     const date = new Date();
     date.setDate(date.getDate() - 1);
-    const currentDate = date.toISOString().split('T')[0]
 
     await fetch(`${api.geo_base}direct?q=${data.weatherEntry}&limit=1&appid=${api.key}`)
         .then((res) => res.json())

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { MainData } from './Weather'
 import "./DisplayMainInfo.css"
 import parse from "../scripts/parseWeather";

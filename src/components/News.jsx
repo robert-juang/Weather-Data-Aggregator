@@ -1,11 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { MainData } from './Weather'
+import React, { useState, useEffect } from 'react'
 import "./DisplayMainInfo.css"
 
 function News({payload}) {
-    
-    // Format: https://newsapi.org/v2/everything?q=bitcoin&sortBy=Relevancy&apiKey=1214f78502564b51af87ad880819bf32
-    const data = useContext(MainData);
+
     const [newsData, setNewsData] = useState({}); 
     const [loaded, setLoaded] = useState(false); 
 
@@ -14,6 +11,7 @@ function News({payload}) {
         setLoaded(true) 
     },[payload])
     //change
+
     return (
         <>
             <div class="main-info" id="news">
